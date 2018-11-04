@@ -1,0 +1,36 @@
+.result-wrapper{
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+
+    &.success{
+        background: rgb(12,140,213);
+        color: white;
+    }
+
+    &.empty{
+        background: rgb(233,32,32);
+        color: white;
+    }
+}
+
+.result-info{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

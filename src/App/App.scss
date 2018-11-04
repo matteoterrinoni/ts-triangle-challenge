@@ -1,0 +1,21 @@
+@import '~@tradeshift/tradeshift-ui/ts.css';
+
+.App {
+  text-align: center;
+}
+
+.panel{
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 3px 19px 0px #0000001a;
+}
+
+.container{
+  max-width: 500px;
+  margin: auto;
+}
+
+.ts-maincontent{
+  padding: 0 15px;
+}

@@ -1,0 +1,60 @@
+
+.triangles{
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.triangle{
+    position: absolute;
+    z-index: 2;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,123,255,0.4) transparent;
+    border-width: 0 20vh calc(1.732 * 20vh) 20vh;
+    width: 0;
+    height: 0;
+
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.triangles.with-error .triangle{
+    border-color: transparent transparent rgba(255, 0, 0, 0.4) transparent;
+}
+
+.triangle.t-1{
+    top: -40vh;
+    left: -40vh;
+    animation-duration: 100000ms;
+    border-width: 0 50vh calc(1.732 * 50vh) 50vh;
+    opacity: 0.3;
+}
+
+.triangle.t-2{
+    top: 30vh;
+    right: 0;
+    animation-duration: 50000ms;
+    border-width: 0 30vh calc(1.732 * 30vh) 30vh;
+    opacity: 0.4;
+}
+
+.triangle.t-3{
+    bottom: -10vh;
+    left: 20vw;
+    opacity: 0.8;
+    animation-direction: reverse;
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
