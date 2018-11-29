@@ -1,5 +1,5 @@
 import React from 'react';
-import T from './model'
+import T from '../triangle'
 
 import './result.scss'
 
