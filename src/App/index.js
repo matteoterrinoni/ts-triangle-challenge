@@ -41,7 +41,7 @@ export class App extends Component {
             <h2>What triangle is it?</h2>
             <div className="App">
               <Form sides={sides} onChangeSide={this.handleChangeSide} />
-              <Result triangle={[a, b, c]}/>
+              <Result measures={[a, b, c]}/>
             </div>
           </div>
         </div>

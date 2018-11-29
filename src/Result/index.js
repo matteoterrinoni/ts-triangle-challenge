@@ -7,11 +7,9 @@ import './result.scss'
 
 import Triangles from '../Triangles'
 
-const Result = ({
-  triangle
-}) => {
+const Result = ({measures}) => {
     
-    const Triangle = Measures(triangle).isTriangle()
+    const Triangle = Measures(measures).isTriangle()
 
     return (
     <div className="result-wrapper">{
