@@ -1,5 +1,7 @@
 import React from 'react';
-import T from '../triangle'
+import {
+    Measures
+} from '../triangle'
 
 import './result.scss'
 
@@ -9,12 +11,12 @@ const Result = ({
   triangle
 }) => {
     
-    const isTriangle = T(triangle).isTriangle()
+    const Triangle = Measures(triangle).isTriangle()
 
     return (
     <div className="result-wrapper">{
 
-        !isTriangle ? 
+        !Triangle ? 
             <div className="panel result empty">
                 <p>not a triangle!</p>
             </div>
@@ -22,21 +24,21 @@ const Result = ({
             
             <div className="panel result success">
             {
-                T(triangle).isEquilateral() &&
+                Triangle.isEquilateral() &&
                 <p className="equilateral">Equilateral</p>
             }
             {
-                T(triangle).isIsosceles() &&
+                Triangle.isIsosceles() &&
                 <p className="isosceles">Isosceles</p>
             }
             {
-                T(triangle).isScalene() &&
+                Triangle.isScalene() &&
                 <p className="scalene">Scalene</p>
             }
             </div>
         }
 
-        <Triangles error={!isTriangle}/>
+        <Triangles error={!Triangle}/>
     
     </div>
     )
